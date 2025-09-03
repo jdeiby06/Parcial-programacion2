@@ -42,35 +42,44 @@ public class Main {
         libro2.Imprimir();
 
         sc.close();
-    }
-    
-
-
-    public boolean prestamo() {
-        if (numPrestados < numEjemplares) {
-            numPrestados=numPrestados + 1;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean devolucion() {
-        if (numPrestados > 0) {
-            numPrestados=numPrestados - 1;
-            return true;
-        } else {
-            return false;
-        }
-    }
     
    
-    public void  Imprimir() {
-        System.out.println("Titulo: " + titulo);
-        System.out.println("Autor: " + autor);
-        System.out.println("Numero de ejemplares: " + numEjemplares);
-        System.out.println("Numero de ejemplares prestados: " + numPrestados);
+
+        
+        if (libro1.prestamo()) {
+            System.out.println("Préstamo realizado para libro 1.");
+        } else {
+            System.out.println("No se pudo realizar el préstamo para libro 1.");
+        }
+
+        if (libro1.devolucion()) {
+            System.out.println("Devolución realizada para libro 1.");
+        } else {
+            System.out.println("No se pudo realizar la devolución para libro 1.");
+        }
+
+       
+        if (libro2.prestamo()) {
+            System.out.println("Préstamo realizado para libro 2.");
+        } else {
+            System.out.println("No se pudo realizar el préstamo para libro 2.");
+        }
+
+        if (libro2.devolucion()) {
+            System.out.println("Devolución realizada para libro 2.");
+        } else {
+            System.out.println("No se pudo realizar la devolución para libro 2.");
+        }
+
     }
+
+
+    
+    
+    
+    
+   
+    
     
     public String getTitulo() {
         return titulo;
@@ -101,10 +110,5 @@ public class Main {
 
     public void setNumPrestados(int numPrestados) {
         this.numPrestados = numPrestados;
-
-    
-    
-    
-
-}
+    }
 }
