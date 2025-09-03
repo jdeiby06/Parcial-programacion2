@@ -15,6 +15,7 @@ public class Libro {
 
     
     public  Libro(String titulo, String autor, int numEjemplares, int numPrestados) {
+        
         this.titulo = titulo;
         this.autor = autor;
         this.numEjemplares = 2;
@@ -43,6 +44,7 @@ public class Libro {
     }
     
     public void  Imprimir() {
+        
         System.out.println("Titulo: " + titulo);
         System.out.println("Autor: " + autor);
         System.out.println("Numero de ejemplares: " + numEjemplares);
