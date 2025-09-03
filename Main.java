@@ -1,14 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        // Libro 1 usando el constructor con parámetros
-        Libro libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", 5, 2);
+    public  String titulo;
+    public  String autor;
+    private  int numEjemplares;
+    private  int numPrestados;
 
-        // Libro 2 usando el constructor por defecto
+    public static void main(String[] args) {
+        
+        Libro libro1 = new Libro("En agosto nos vemos", "Gabriel Garcia Marquez", 4, 2);
+
+        
         Libro libro2 = new Libro();
 
-        // Obtener datos para libro2 por consola
+        
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Ingrese el título del libro 2: ");
@@ -23,7 +28,7 @@ public class Main {
         System.out.print("Ingrese el número de ejemplares prestados del libro 2: ");
         libro2.setNumPrestados(sc.nextInt());
 
-        // Imprimir datos de ambos libros
+        
         System.out.println("\nDatos del libro 1:");
         libro1.Imprimir();
 
